@@ -1,0 +1,44 @@
+body {
+  position: relative;
+  font-family: sans-serif;
+  text-align: center;
+  background-color: #212121;
+  color: white;
+}
+
+.board {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.board td {
+  padding: 1em;
+}
+
+.msg.valid {
+  padding: 1em;
+  font: 1rem;
+  text-shadow: 2px 2px black;
+  background-color: green;
+}
+
+.msg.caution {
+  padding: 1em;
+  font: 1rem;
+  text-shadow: 2px 2px black;
+  background-color: #eed202;
+}
+
+.msg.invalid {
+  padding: 1em;
+  font: 1rem;
+  text-shadow: 2px 2px black;
+  background-color: red;
+}
+
+.guesses {
+  position: absolute;
+  left: 10em;
+  offset-position: auto;
+  offset-anchor: center;
+}

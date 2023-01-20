@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Boggle</title>
+    <link rel="stylesheet" href="/static/app.css" />
+  </head>
+  <body>
+    <h1>Boggle</h1>
+    <p class="msg"></p>
+    <p>High Score: {{highscore}} in {{attempts}} attempts</p>
+    <p>Score: <span class="score">0</span></p>
+    <p>Time: <span class="timer">1:00</span></p>
+    <table class="board" hidden>
+      <tbody>
+        {% for row in board %}
+        <tr>
+          {% for letter in row %}
+          <td>{{ letter }}</td>
+          {% endfor %}
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+    <ul class="guesses"></ul>
+    <button class="start-game">Start</button>
+
+    <form class="guess-form" method="POST" hidden>
+      <input name="guess" class="guess" autofocus />
+      <button>Submit</button>
+    </form>
+  </body>
+  <script src="http://unpkg.com/jquery"></script>
+  <script src="https://unpkg.com/axios/dist/axios.js"></script>
+  <script src="/static/app.js"></script>
+</html>
